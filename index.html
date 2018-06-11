@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>    
+  <head>
+    <meta charset="utf-8">
+    <title>Firebase CRUD com Javascript!</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <h1 style="text-align: center;">Firebase CRUD com Javascript!</h1>
+
+    <!-- Chamada do botão de adicionar usuário -->
+    <section id="add-user-module" >
+        <button id="open-add-user-form-btn">+</button>
+        <form>
+            <h2>Novo Usuário</h2>
+            NOME:<br>
+            <input type='text' data-key='name' class='user-input'><br>
+            IDADE:<br>
+            <input type='text' data-key='age' class='user-input'><br>
+            E-MAIL:<br>
+            <input type='text' data-key='email' class='user-input'><br>
+            <button type='button' id="add-user-btn">Adicionar</button>
+        </form>
+    </section>
+
+    <!-- Chamada do botão de editar usuário -->
+    <section id="edit-user-module">
+        <form>
+            <h2>Editar usuário</h2>
+            <input type="hidden" class="edit-userid">
+            NOME:<br>
+            <input type='text' data-key='name' class='edit-user-input'><br>
+            IDADE:<br>
+            <input type='text' data-key='age' class='edit-user-input'><br>
+            E-MAIL:<br>
+            <input type='text' data-key='email' class='edit-user-input'><br>
+            <button type='button' id="edit-user-btn">Salvar</button>
+        </form>
+    </section>
+
+    <ul id="user-list"></ul>
+    <div id="user-detail"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+</html>
